@@ -1,67 +1,50 @@
 java c
 ECE6101/CSE6461 
-Homework 1 Assignment 
-Autumn 2024 
-Expected Completion Date: September 26, 2024
-1.  (Garcia-Widjija 1.2)
-•  Describe what step-by-step procedure might be involved inside the network in making a telephone connection.
-•  Now consider a personal communication service that provides a user with a personal telephone number. When the number is dialed, the network establishes a connection to wherever the user is located at the given time.  What functions must the network now perform. to implement this service?
-2.  (Garcia-Widjija 1.5)Suppose that network addresses are scarce and are assigned so that they are not globally unique; in particular, suppose that the same block of addresses may be assigned to multiple organizations.  How can the organizations use these addresses?   Can users  from two such organizations communicate with each other?
-3.  (Garcia-Widjija 1.9)
-•  Suppose that an interactive videogame is accessed over a communication network What requirements are imposed on the network if the network is connection-oriented) connec- tionless?
-•  Repeat part (a) if the game involves several players located at different sites.
-•  Repeat part (b) if one or more of the players is in motion, for example, kids in the back of the van during a summer trip.
-4.  (Garcia-Widjija 1.15)
-The propagation delay is the time required for the energy of a signal to propagate from one point to another.
-The speed of light in cable is 2.3 × 108m/s.  Consider the following networks:
-a circuit board 
-10 cm 
-a room 
-10 m 
-a building 
-100 m 
-a metropolitan area 
-100 km 
-a continent 
-5000 km 
-up and down a geostationary satellite 
-2 x 36000 km Further consider the transmission speeds 10,000 bits/second; 1 megabit/second; 100 megabits/second; 10 gigabits/second.
-How long does it take to send an L-byte file and to receive a 1-byte acknowledgment back? Let L = 1, 103 , 106 , and 109  bytes.
-5.  Prove that finite  additivity  follows from countable  additivity.
-6. From the axioms of probability, prove the following:
-(a) For an event A and its complement Ac , prove that Pr{Ac } = 1 − Pr{A}
-(b) If A ⊆ B, then Pr{A} ≤ Pr{B}.
-7.  Show that if Pr{A|B} > Pr{A} then Pr{B|A} > Pr{B}.
-8. A regular die is thrown n times.  What is the probability that “6” comes up n − 1 times in the n throws?
-9. Let X be a non-negative random variable with distribution f. Show that
+Homework 2 Assignment 
+Autumn 2024
+Expected Completion Date: October 11, 2024
+1. Let {N1(t), t ≥ 0} be a Poisson Process with rate λ .  Can Z(t) = αN1(t) + βN2 (t) ever be a Poisson Process, where α and β are some non-zero constants.  In other words, are there any values of α , β, and N2(t) such that {Z(t)t ≥ 0} is a Poisson Process.  Please note that {N2(t), t ≥ 0} is not allowed to be either a Poisson Process, and is also not allowed to be a trivial random process (e.g., it is not a constant over all time). Carefully prove or disprove.
+2. Let τ1  and τ2  be two exponentially distributed,  independent random variables with means 1/λ1  and  1/λ2 ,  respectively.   Show  that  the random variable min(τ1 ,τ2 ) is exponentially distributed with mean 1/(λ1 + λ2 ). Also show that P({τ1  < τ2 }) = λ 1 /(λ1 + λ2 ). Use these facts to show that an M/M/1 queue can be described by a continuous-time Markov chain with transition rates qn,n+1 = λ and qn,n−1  = µ,n = 0, 1, 2, . . ..
+3.  A telephone company establishes a direct connection between two cities expecting Poisson traffic with rate 30 calls/min.   The  durations  of calls  are independent and exponentially distributed with mean 3 min. Interarrival times are independent of call durations.  How many circuits should the company provide to ensure that an attempted call is blocked (because all circuits are busy) with probability less than 0.01?  It is assumed that blocked calls are lost (i.e., a blocked call is not attempted again).
+4. A switchboard has two outgoing lines and is concerned only with servicing the outgoing calls of three customers who never call each other. When a customer is not on a line, each potential caller generates calls at a Poisson rate λ .  Call lengths are exponentially distributed, with a mean call length of  .  If a caller finds the switchboard blocked, he never tries to retry that particular call. All call initiations and durations are independent of each other.
+(a)  Determine the fraction of time that the switchboard is saturated.
+(b)  Determine the fraction of outgoing calls which encounter a saturated switchboard.
+5.  Show that the blocking probability PB  of the finite M/M/1/Nqueue PB  = pn can be obtained by equating the net arrival rate λ(1−PB) to the average departure rate µ(1−P0) and solving for PB .
+6.  Consider an M/M/N/N queuing system with the arrival rate λn   =  λ and the dependent departure rate of µn  = nµ for 1 ≤ n ≤ N.
+(a)  Show that the probability the system is in state n is an Erlang distribution. (b)  Compute the average number in the system.
+(c)  Show that the average throughput is γ = µE[n] in two ways:
+i. Use γ = εn(N)=0 µnPn
+ii. γ = λ(1 − PB), where PB  is the blocking probability.
+(d)  Little ’s theorem says that E [T] = γE[n] = µ/1 here.  Explain this result, i.e., there is no waiting time.
+7. Find the mean, variance, and moment generating function 代 写ECE6101/CSE6461 Computer Communication Networks Homework 2 Assignment Autumn 2024Web
+代做程序编程语言of a Poisson, Erlang, exponential, and Gaussian random variables.
+8.  (Schwartz 2-3)
+Calculate and plot the Poison distribution given by
+p(k) = (λT)ke−λT/k!       k = 0, 1, 2, ···for the three cases λT = 0.1, 1, 10.  In the third case try to carry the calculation and plot out to at least A  = 20.   (Stirling’s  approximation  for  the  factorial  may be useful here.) Does the distribution begin to crowd in  and peak  about E(k)  as predicted by the ratio σk/E(k) = 1/√λT? 
+9.  (Schwartz 2-5)
+Refer to the time-dependent equation (2-12a) below
+pn(t + ∆t) = [1 − (λ + µ)∆t]pn(t) + λ∆tpn−1(t) + µ∆tpn+1(t)governing the operation of the M/M/1 queue.   Start at time t= 0 with the queue empty. (What are then the values pn(0)?)  Let λ/µ = 0.5 for simplicity, take ∆t = 1, and pick λ∆t and µ∆t very small so that terms of (∆t)2  and higher can be ignored. Write a program that calculates pn(t + ∆t) recursively as t is incremented by ∆t and show that pn(t) does settle down eventually to the steady-state set of probabilities {pn)}.  Pick the maximum value of n to be 5.  The set of steady-state probabilities obtained should then agree with Eq.  (2-20) below
+pn = (1 − ρ)ρn /(1 − ρN+1 ).
+Note:  Eq.  (2-12a) must be modified slightly in calculating p0 (t + ∆t) and p5 (t + ∆t).  You may want to set the problem up in matrix. vector form.
+10.  (Schwartz 2-9)Show that the blocking probability PB  of the finite M/M/1 queue is given by PB  = pN  by equating the net arrival rate λ(1 − PB) to the average departure rate µ(1 − P0) and solving for PB .
+11.  (Schwartz 2-11)
+Consider a finite M/M/1 queue capable of accommodating N packets (customers). Calculate the values of N required for the following situations:
+(a) ρ = 0.5,    PB  = 10−3 ,    10−6
+(b) ρ = 0.8,    PB  = 10−3 ,    10−6 Compare the results obtained.
+12.  (Schwartz 2-17)
+Consider the M/M/2 queue discussed. Derive Eq.  (2-43) below
 
-and
+the expression for the probability of state occupancy, and Eq.  (2-44), below
 
-10. X and Y are random variables.
-(a)  Show that E[X] = E[E[X|Y]].<代 写ECE6101/CSE6461 Computer Communication Networks Homework 1 Assignment Autumn 2024
-代做程序编程语言br>(b) If Pr{X ≤ x, Y ≤ y} = Pr{X ≤ x}Pr{Y ≤ y}, then show that E[XY] = E[X]E[Y], i.e. if two random variables are independent, then show that they are uncorrelated.  Is the reverse true? Prove or disprove.
-(c)  The moment generating function of a random variable Z is defined as ΨZ(t) := E[etZ ].
-Now if X and Y are independent random variables then show that ΨX+Y(t) = ΨX (t)ΨY (t).
-Also, if ΨX(t) = (λ-t/λ)n , then determine E[X] and Var  
-(d)  Show the conditional variance formula:
-Var(X) = E[Var(X|Y)] + Var(E[X|Y]) , 
-where Var(X|Y) = E [(X − E[X|Y])2 |Y].
-11.  Let X1, X2 , . . . denote a sequence of independent random variables that are identically dis- tributed with moment generating function ΨX (t). Let N denote anon-negative integer-valued random variable that is independent of the sequence X1, X2 , . . .. Further, let
+the equation for the average queue occupancy.  Plot µE(T) (normalized time delay) versus λ , the average arrival rate (load on the system) for the M/M/2 queue, and compare with two single-server cases: an M/M/1 queue with service rate µ and an M/M/1 queue with service rate 2µ . Check Fig. 2-27 below.
 
-Find the moment generating function of Y. Find the mean and the variance of Y.
-12.  An ordinary 52-card deck is thoroughly shuffled. You are dealt five cards. (a) What is the probability that all five cards are sevens.
-(b) What is the probability that at least one of the cards is a seven.
-(c) What is the probability that none of them are seven.
-(d) What is the probability that two out the five cards is a seven.
-13.  Let X be a binomial random variable with parameters p ∈ (0, 1) and n = 0, 1, 2, . . .. In other words for k = 0, 1, . . . , n
+13.  (Schwartz 2-18)Refer to the multiple (or ample) server and queue with discouragement examples discussed in the text.  Show that the state probability distribution and the average queue occupancy are given, in both examples, by Eq.  (2-47) with Eq.  (2-48) below
+pn/p0 = (λ/µ)n /n!
+p0 = e−ρ                                                                     ρ = λ/µ,
+and Eq.  (2-49) below
+∞ 
 
-If n ↑ ∞ and p ↓ 0 such that np → λ, show that the distribution of the random variable X converges to that of a Poisson random variable with mean λ .
-14.  Carefully show that definitions I and II given in the notes for a Poisson process are equivalent. Hint: In deriving II from I, set up a differential equation in the following manner. First define P0(t + h) := P({N(t + h) = 0}). Then
-
-Now let h → 0 and set up and solve the appropriate differential equation.  After solving for P0(t) proceed to solve for Pn(t) := P({N(t) = n}) in much the same manner.
-15.  After traversing a wireless error filled channel packets arrive at a network node according a Poisson Process with rate λ .  These packets could have corrupted bits due to the wireless channel which has a bit error probability p.  A packet is said to arrive at the node successfully if no bits are in error.  The number of bits in a given packet is Poisson distributed with mean µ .  Assume that packets are not retransmitted.  Find the rate at which successful packets arrive at the network node.
-
-
+respectively. However, the average time delay and throughput are different in the two cases. Calculate these two quantities in both cases and compare.
 
 
 
